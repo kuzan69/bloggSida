@@ -1,0 +1,26 @@
+<div class="author">
+  <h1 class="authorHeading">Hey <span class="lads">LADS</span></h1>
+  <p class="authorBody"></p>
+</div>
+
+<img src="/images/conor.jpg" alt="conor" class="image" width="980">
+
+<section class="articles">
+  <h2 class="articlesHeading">Me posts</h2>
+
+  <ul class="articleUl">
+    <% data.forEach(post => { %>
+      <li>
+        <a href="/post/<%= post._id %>">
+          <span><%= post.title %></span>
+          <span class="articleListDate"><%= post.createdAt.toDateString() %></span>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pegination">&lt; View older posts</a>
+  <% } %>
+
+</section>

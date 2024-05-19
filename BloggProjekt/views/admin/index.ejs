@@ -1,0 +1,27 @@
+<h2 id="signInOrUp">Sign In</h2>
+
+<form id="login" action="/admin" method="POST">
+  <label for="username"><b>Usermane</b></label>
+  <input type="text" placeholder="Ex. Kuzan" name="username" required>
+
+  <label for="password"><b>Password</b></label>
+  <input type="password" placeholder="Password" name="password" required>
+
+  <input class="btn" type="submit" value="Login">
+</form>
+
+<form id="signUp" action="/register" method="POST">
+  <label for="username"><b>Usermane</b></label>
+  <input type="text" placeholder="Ex. Kuzan" name="username" required>
+
+  <label for="email"><b>Email</b></label>
+  <input type="email" placeholder="Ex. kuzan@gmail.com" name="email" required>
+
+  <label for="password"><b>Password</b></label>
+  <input type="password" placeholder="Unique password" name="password" required>
+
+  <input class="btn" type="submit" value="Register">
+</form>
+
+<p id="noAccountYet">Ye don't have an account, eh?</p>
+<p id="backToLogin">Ye do have an account, eh?</p>
